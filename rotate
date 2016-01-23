@@ -1,0 +1,11 @@
+#!/bin/sh
+
+target=${1#dscf}
+ntarget=${target#0}
+
+while [ $ntarget != $target ]; do
+  target=$ntarget
+  ntarget=${target#0}
+done
+
+jpegtran -rotate 90 $1 > $target

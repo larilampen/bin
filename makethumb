@@ -1,0 +1,3 @@
+#!/bin/sh
+
+djpeg -scale 1/8 $1 | cjpeg -quality 70 > thumbnail-$1

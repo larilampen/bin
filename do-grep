@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Recursive grep, skip subversion junk.
+
+find . -type f ! -regex ".*/\.svn.*" -print0 | xargs -0 grep "$@"
